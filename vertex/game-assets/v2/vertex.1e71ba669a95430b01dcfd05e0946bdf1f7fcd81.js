@@ -679,17 +679,17 @@
           className: "geo-modal__intro"
         }, P.createElement("div", {
           className: "geo-modal__title"
-        }, "How to play"), P.createElement("div", {
+        }, "Cómo jugar"), P.createElement("div", {
           className: "geo-modal__description"
-        }, "Draw lines between points to create triangles."), P.createElement("ul", {
+        }, "Traza líneas entre los puntos para crear triángulos."), P.createElement("ul", {
           className: "geo-modal__list"
-        }, P.createElement("li", null, "Connect vertices to create triangles and assemble an image."), P.createElement("li", null, "The number on a vertex shows its remaining connections."), P.createElement("li", null, "Triangles will fill in if they are correct."), P.createElement("li", null, "Double tap a vertex to clear its connections.")), P.createElement("p", {
+        }, P.createElement("li", null, "Uní los puntos para crear triángulos y armar una imagen."), P.createElement("li", null, "El número de un punto muestra las conexiones que le faltan."), P.createElement("li", null, "Los triángulos se rellenan si están bien."), P.createElement("li", null, "Tocá dos veces un punto para borrar sus conexiones.")), P.createElement("p", {
           className: "geo-modal__message"
-        }, "There are new puzzles every day."), P.createElement("p", {
+        }, "Hay puzzles nuevos todos los días."), P.createElement("p", {
           className: "geo-modal__message"
-        }, "Have feedback? Email us at ", P.createElement(Ce, {
-          subject: "Vertex Feedback"
-        }, "nytgames@nytimes.com"), ".")))
+        }, "¿Comentarios? Escribinos a ", P.createElement(Ce, {
+          subject: "Comentarios de Vertex"
+        }, "contacto@adnsur.com"), ".")))
       },
       closeByEx: !0,
       closeByBgClick: !0
@@ -1754,7 +1754,7 @@
         type: "button",
         className: "geo-undo",
         onClick: r.undoLine
-      }, P.createElement("p", null, "Undo"))
+      }, P.createElement("p", null, "Deshacer"))
     }, e = function() {
       return P.createElement("div", {
         className: "geo-zoom-panel"
@@ -2089,16 +2089,16 @@
         }],
         t = [{
           type: "text",
-          value: "Help",
+          value: "Ayuda",
           action: a
         }, {
           type: "text",
-          value: "Reset",
+          value: "Reiniciar",
           action: n
         }];
       o && t.push({
         type: "text",
-        value: "Skip",
+        value: "Saltar",
         action: o
       }), l.mobileNavTools.create(i.inShortzMode ? [].concat(t, e) : t)
     }, [n, r, i]), e = i.inShortzMode || "prod" !== l.env.name, c.createPortal(P.createElement(P.Fragment, null, P.createElement("span", {
@@ -2111,17 +2111,17 @@
       role: "button",
       className: "pz-toolbar-button",
       onClick: o
-    }, "Skip Tutorial")), P.createElement("span", {
+    }, "Saltar el tutorial")), P.createElement("span", {
       className: "pz-toolbar-right"
     }, P.createElement("span", {
       role: "button",
       className: "pz-toolbar-button",
       onClick: a
-    }, "Help"), P.createElement("span", {
+    }, "Ayuda"), P.createElement("span", {
       role: "button",
       className: "pz-toolbar-button",
       onClick: n
-    }, "Reset"))), At)
+    }, "Reiniciar"))), At)
   }
 
   function bt(e) {
@@ -2180,7 +2180,7 @@
       a = e.playGame,
       i = e.track;
     return t.hasXwd ? n ? P.createElement(_t, {
-      text: "Solved",
+      text: "Resuelto",
       action: function() {
         a(), i("VIEW_SOLVED")
       }
@@ -2190,7 +2190,7 @@
       } : function() {
         a(), i("START_GAME")
       },
-      text: r ? "Continue" : "Today's Puzzle"
+      text: r ? "Continuar" : "Puzzle de hoy"
     }) : P.createElement(P.Fragment, null, P.createElement(_t, {
       text: "Subscribe",
       action: function() {
@@ -2200,7 +2200,7 @@
       action: function() {
         o("vertexTodaysPuzzle"), i("LOCKED_PLAY")
       },
-      text: "Today’s Puzzle",
+      text: "Puzzle de hoy",
       icon: "locked",
       color: "secondary"
     }))
@@ -2211,13 +2211,13 @@
       n = e.hasCompletedDailyPuzzle,
       r = e.hasLoaded;
     return (e = e.userType).hasXwd ? t ? n ? P.createElement(Et, {
-      text: "Come back tomorrow to play a new puzzle."
+      text: "Volvé mañana para jugar un puzzle nuevo."
     }) : P.createElement(Et, {
-      text: "Reveal the full picture."
+      text: "Revelá el dibujo completo."
     }) : P.createElement(Et, {
-      text: "Connect the dots and <br/> reveal the hidden picture."
+      text: "Uní los puntos y <br/> revelá el dibujo oculto."
     }) : r && !e.hasXwd ? P.createElement(Et, {
-      text: "Subscribe to New York Times Games to play Vertex every day."
+      text: "Volvé cada día para un puzzle nuevo."
     }) : null
   }
 
@@ -2403,7 +2403,7 @@
         text: "Vertex"
       })), e && P.createElement("h2", {
         className: "geo-moment__subtitle"
-      }, "Welcome back."), P.createElement(Ot, {
+      }, "Hola de nuevo."), P.createElement(Ot, {
         hasProgress: o,
         hasCompletedDailyPuzzle: c,
         hasLoaded: l,
@@ -2434,17 +2434,17 @@
       }), P.createElement(wt, {
         text: "Vertex"
       }), P.createElement(Et, {
-        text: "Connect the dots and <br /> reveal the hidden picture."
+        text: "Uní los puntos y <br /> revelá el dibujo oculto."
       }), P.createElement("div", {
         className: "geo-moment__actions"
       }, P.createElement(_t, {
-        text: "Play",
+        text: "Jugar",
         action: function() {
           n(), t("START_GAME")
         }
       })), P.createElement(St, null, P.createElement("span", {
         className: "pz-moment__info-date"
-      }, "Tutorial Puzzle")), P.createElement(St, null, "By Noca Wu"))))
+      }, "Puzzle tutorial")), P.createElement(St, null, "Por ADN SUR"))))
     },
     Lt = function(e) {
       var t = e.track,
@@ -2462,23 +2462,23 @@
         className: "geo-moment__title"
       }, "Vertex"), P.createElement("h2", {
         className: "geo-moment__subtitle"
-      }, "Welcome back."), P.createElement(Et, {
-        text: r ? "Reveal the full picture" : "Start connecting the dots."
+      }, "Hola de nuevo."), P.createElement(Et, {
+        text: r ? "Revelar el dibujo completo" : "Empezá a unir los puntos."
       }), P.createElement("div", {
         className: "geo-moment__actions"
       }, P.createElement(_t, {
-        text: r ? "Continue" : "Play",
+        text: r ? "Continuar" : "Jugar",
         action: function() {
           n(), t(r ? "CONTINUE" : "START_GAME")
         }
       })), P.createElement(St, null, P.createElement("span", {
         className: "pz-moment__info-date"
-      }, "Starter Puzzle ".concat(parseInt(e) + 1))), P.createElement(St, null, "By Noca Wu"))))
+      }, "Puzzle de práctica ".concat(parseInt(e) + 1))), P.createElement(St, null, "Por ADN SUR"))))
     },
     Dt = {
-      header: "Try A Different Game",
+      header: "Probá otro juego",
       title: "Spelling Bee",
-      text: "Tackle <strong>today&apos;s puzzle.</strong>",
+      text: "Resolvé <strong>el puzzle de hoy.</strong>",
       containerClassNames: ["sb"],
       link: "/puzzles/spelling-bee"
     };
@@ -2507,9 +2507,9 @@
       }, P.createElement(bt, {
         icon: "vertex"
       }), P.createElement(wt, {
-        text: "Nice drawing!"
+        text: "¡Buen dibujo!"
       }), P.createElement(Et, {
-        text: "Come back tomorrow to play a new puzzle."
+        text: "Volvé mañana para jugar un puzzle nuevo."
       }), P.createElement("div", {
         className: "geo-moment__actions"
       }, P.createElement("button", {
@@ -2518,13 +2518,13 @@
         onClick: function() {
           n(), t("ADMIRE_MY_PUZZLE")
         }
-      }, "Admire your puzzle."), o && !e.hasXwd && P.createElement(_t, {
+      }, "Admirá tu obra."), o && !e.hasXwd && P.createElement(_t, {
         text: "Subscribe",
         action: function() {
           return r("vertexPreviewPageNonsubs")
         }
       }), P.createElement(_t, {
-        text: "View all games",
+        text: "Ver todos los juegos",
         color: o && !e.hasXwd ? "secondary" : "primary",
         action: function() {
           var e;
@@ -2554,13 +2554,13 @@
       }, P.createElement(bt, {
         icon: "vertex"
       }), P.createElement(wt, {
-        text: "Nice drawing!"
+        text: "¡Buen dibujo!"
       }), P.createElement(Et, {
-        text: "You know how to play, so let's solve some puzzles."
+        text: "Ya sabés jugar, así que resolvamos algunos puzzles."
       }), P.createElement("div", {
         className: "geo-moment__actions"
       }, P.createElement(_t, {
-        text: "Play",
+        text: "Jugar",
         action: function() {
           n(), t("START_GAME")
         }
@@ -2593,9 +2593,9 @@
     }, P.createElement(bt, {
       icon: "vertex"
     }), P.createElement(wt, {
-      text: "Congrats on your masterpiece!"
+      text: "¡Felicitaciones por tu obra maestra!"
     }), P.createElement(Et, {
-      text: o.hasXwd ? "As a Games subscriber, you can play Vertex every day." : "Subscribe to New York Times Games to play Vertex every day."
+      text: o.hasXwd ? "Cada día hay un Vertex nuevo para jugar." : "Volvé cada día para un puzzle nuevo."
     }), P.createElement("div", {
       className: "geo-moment__actions"
     }, a && !o.hasXwd && P.createElement(_t, {
@@ -2604,12 +2604,12 @@
         return r("vertexCongratsMomentEndOfStarterPack")
       }
     }), o.hasXwd ? P.createElement(_t, {
-      text: "Today’s Puzzle",
+      text: "Puzzle de hoy",
       action: function() {
         n(), t("START_GAME")
       }
     }) : P.createElement(_t, {
-      text: "Today’s Puzzle",
+      text: "Puzzle de hoy",
       color: "secondary",
       icon: "locked",
       action: function() {
@@ -2663,13 +2663,13 @@
       }, P.createElement(bt, {
         icon: "vertex"
       }), P.createElement(wt, {
-        text: "You're becoming an artist."
+        text: "Te estás volviendo un artista."
       }), P.createElement(Et, {
-        text: "Keep up the good work."
+        text: "Seguí así."
       }), P.createElement("div", {
         className: "geo-moment__actions"
       }, P.createElement(_t, {
-        text: "Next Puzzle",
+        text: "Siguiente puzzle",
         action: function() {
           n(), t("START_GAME")
         }
@@ -2797,7 +2797,7 @@
     }), P.createElement(wt, {
       text: "Vertex"
     }), P.createElement(Et, {
-      text: "Start connecting the dots..."
+      text: "Empezá a unir los puntos..."
     }), P.createElement("div", {
       className: "geo-loader",
       id: "pz-loading-bar"

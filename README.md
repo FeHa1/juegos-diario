@@ -13,15 +13,20 @@ Tome la inspiracion de hacer los juegos que se ven en el NYT en español para pr
 python3 -m http.server 8000
 ```
 
-y abrí `http://localhost:8000/wordle/` en el navegador.
-(Los otros juegos van a necesitar este servidor cuando se traduzcan; por eso conviene
-acostumbrarse a esta forma.)
+y abrí `http://localhost:8000/wordle/` (o `/vertex/`) en el navegador.
+(Wordle también funciona con doble clic; Vertex y los demás necesitan el servidor.)
 
 Para cortar el servidor: `Ctrl + C` en la terminal.
 
 
-### Wordle en español
+### Estado de la traducción
 
-El juego de la carpeta `wordle/` está traducido al español, con teclado con **Ñ**
-y una lista de palabras editable a mano.
+| Juego | Estado | Notas |
+|---|---|---|
+| **Wordle** (`wordle/`) | ✅ traducido | teclado con Ñ + lista de palabras editable (`wordle/palabras.js`). Ver `wordle/TRADUCCION.md` |
+| **Vertex** (`vertex/`) | ✅ traducido | interfaz + títulos de puzzles. Ver `vertex/TRADUCCION.md`. Necesita servidor local |
+| Spelling Bee, Letter Boxed, Tiles, Mini Crucigrama | ⏳ pendiente | |
+
+Todo se hace sin decir "NYT" / "New York Times": la marca es el diario ficticio
+**ADN SUR**.
 
