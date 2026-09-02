@@ -13,8 +13,8 @@ Tome la inspiracion de hacer los juegos que se ven en el NYT en español para pr
 python3 -m http.server 8000
 ```
 
-y abrí `http://localhost:8000/wordle/` (o `/vertex/`) en el navegador.
-(Wordle también funciona con doble clic; Vertex y los demás necesitan el servidor.)
+y abrí `http://localhost:8000/wordle/` (o `/vertex/`, `/letter-boxed/`) en el navegador.
+(Wordle también funciona con doble clic; los demás necesitan el servidor.)
 
 Para cortar el servidor: `Ctrl + C` en la terminal.
 
@@ -25,7 +25,8 @@ Para cortar el servidor: `Ctrl + C` en la terminal.
 |---|---|---|
 | **Wordle** (`wordle/`) | ✅ traducido | teclado con Ñ + lista de palabras editable (`wordle/palabras.js`). Ver `wordle/TRADUCCION.md` |
 | **Vertex** (`vertex/`) | ✅ traducido | interfaz + títulos de puzzles. Ver `vertex/TRADUCCION.md`. Necesita servidor local |
-| Spelling Bee, Letter Boxed, Tiles, Mini Crucigrama | ⏳ pendiente | |
+| **Letter Boxed** (`letter-boxed/`) | ✅ traducido | interfaz + puzzle en español. Ver `letter-boxed/TRADUCCION.md`. Necesita servidor local |
+| Spelling Bee, Tiles, Mini Crucigrama | ⏳ pendiente | |
 
 Todo se hace sin decir "NYT" / "New York Times": la marca es el diario ficticio
 **ADN SUR**.

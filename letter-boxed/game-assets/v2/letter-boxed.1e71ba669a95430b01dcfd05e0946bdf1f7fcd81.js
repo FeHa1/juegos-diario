@@ -1271,7 +1271,7 @@
             }, 100).onUpdate(t);
           e.chain(t).start(), re(100).then(function() {
             var e, t, n, r;
-            i.showMessage((t = (e = o).previousSuccess, n = o.submittedWords, r = void 0 === n ? [] : n, n = o.isCompleted, e = o.activeWord, (r.length ? r[r.length - 1] : e).length < 7 ? t ? "Nice!" : "Awesome!" : n ? "Savant!" : "Genius!"), !1)
+            i.showMessage((t = (e = o).previousSuccess, n = o.submittedWords, r = void 0 === n ? [] : n, n = o.isCompleted, e = o.activeWord, (r.length ? r[r.length - 1] : e).length < 7 ? t ? "¡Bien!" : "¡Buenísimo!" : n ? "¡Erudito!" : "¡Genio!"), !1)
           }), re(800).then(i.clearErrorMessage)
         }), tt(Qe(m), "interactionDown", function(e) {
           var t, n;
@@ -1454,16 +1454,16 @@
       onClick: function() {
         !r && dt(o) && (ut.interaction.settings("how-to-play"), t.open("help", "toolbar"))
       },
-      "data-full": "Help",
-      "data-short": "Help"
+      "data-full": "Ayuda",
+      "data-short": "Ayuda"
     }), d.createElement("span", {
       role: "button",
       className: "pz-toolbar-button lb-toolbar-button__restart",
       onClick: function() {
         dt(o) && (ut.interaction.gameplay("reset-game", n.puzzle.par), n.resetGame())
       },
-      "data-full": "Restart",
-      "data-short": "Restart"
+      "data-full": "Reiniciar",
+      "data-short": "Reiniciar"
     })), d.createElement("span", {
       className: "pz-toolbar-right"
     }, !u.isMobile && d.createElement("span", {
@@ -1472,7 +1472,7 @@
       onClick: function() {
         r || (ut.interaction.settings("yesterday-solution"), t.open("yesterday", "toolbar"))
       },
-      "data-full": "Yesterday’s Answers",
+      "data-full": "Respuestas de ayer",
       "data-short": ""
     }))), ht)
   }
@@ -1482,7 +1482,7 @@
       mt.localStorage.removeItem(yt)
     },
     vt = function(e) {
-      return !l.userType.hasXwd && ft(e)
+      return false
     },
     ht = document.getElementById("".concat(u.isMobile ? "js-mobile" : "portal-game", "-toolbar"));
 
@@ -1678,7 +1678,7 @@
           className: "lb-word-list-container"
         }, d.createElement("div", {
           className: "lb-word-list-length"
-        }, e.length, " ", 1 < e.length ? "words" : "word"), d.createElement("div", {
+        }, e.length, " ", 1 < e.length ? "palabras" : "palabra"), d.createElement("div", {
           className: "lb-word-list"
         }, e.map(function(e, t) {
           return d.createElement(jt, {
@@ -2124,7 +2124,7 @@
       className: "pz-hybrid-back"
     }, e), d.createElement("span", {
       className: "pz-hybrid-back__text"
-    }, "Back"))
+    }, "Atrás"))
   }
   var zn = function() {
       return window.isHybridWebView && window.NativeBridge ? d.createElement(Cn, {
@@ -2194,7 +2194,7 @@
       e = e.editor;
       return e ? d.createElement("span", {
         className: "pz-moment__info-editor"
-      }, "Edited by ".concat(e)) : null
+      }, "Editado por ".concat(e)) : null
     },
     Mn = function(e) {
       e = e.children;
@@ -2401,28 +2401,28 @@
             icon: "letter-boxed",
             title: "Letter Boxed",
             date: "".concat({
-              "01": "January",
-              "02": "February",
-              "03": "March",
-              "04": "April",
-              "05": "May",
-              "06": "June",
-              "07": "July",
-              "08": "August",
-              "09": "September",
-              10: "October",
-              11: "November",
-              12: "December"
+              "01": "enero",
+              "02": "febrero",
+              "03": "marzo",
+              "04": "abril",
+              "05": "mayo",
+              "06": "junio",
+              "07": "julio",
+              "08": "agosto",
+              "09": "septiembre",
+              10: "octubre",
+              11: "noviembre",
+              12: "diciembre"
             } [e[1]], " ").concat(e[2], ", ").concat(e[0]),
             bgColor: "$letter-boxed-pink",
             buttons: [{
-              text: "Play",
+              text: "Jugar",
               action: function() {
                 l.mobileNavTools.activate(), sr.transition("welcome", "game"), ut.interaction.gameplay("letter-boxed", "start-game", n.par)
               }
             }],
             description: {
-              text: "Create words using letters around the square."
+              text: "Formá palabras con las letras del cuadrado."
             },
             meta: {
               plays: ""
@@ -2430,7 +2430,7 @@
             editor: n.editor,
             promo: "oxford"
           };
-        return o && r && (e.meta.plays = "0 plays left today", e.buttons[0].color = "secondary", e.buttons[0].icon = "locked", e.buttons[0].action = function() {
+        return o && r && (e.meta.plays = "Volvé mañana por otro", e.buttons[0].color = "secondary", e.buttons[0].icon = "locked", e.buttons[0].action = function() {
           ut.interaction.custom({
             module: {
               element: {
@@ -2440,17 +2440,17 @@
             }
           })
         }, e.buttons.push({
-          text: "Subscribe",
+          text: "Seguir",
           action: function() {
             Kn("letterBoxedCard"), t()
           }
         })), !o && r && (e.buttons.push({
-          text: "Subscribe",
+          text: "Seguir",
           color: "secondary",
           action: function() {
             Kn("letterBoxedCard"), t()
           }
-        }), e.meta.plays = "1 play left today"), d.createElement(Jn, {
+        }), e.meta.plays = "Un puzzle nuevo cada día"), d.createElement(Jn, {
           game: e
         })
       }
@@ -2723,7 +2723,7 @@
           message: t.message
         }), 0 < t.submittedWords.length && d.createElement(Nt, this.props), d.createElement("div", {
           className: "lb-par"
-        }, "Try to solve in ", t.par, " ", 1 < t.par ? "words" : "word")), d.createElement("div", {
+        }, "Intentá resolverlo en ", t.par, " ", 1 < t.par ? "palabras" : "palabra")), d.createElement("div", {
           className: "lb-square-container"
         }, !1 === t.message.isError && d.createElement(qt, {
           message: t.message
@@ -2733,7 +2733,7 @@
           type: "button",
           className: "lb-button",
           onClick: n.removeLetter
-        }, "Delete"), d.createElement("button", {
+        }, "Borrar"), d.createElement("button", {
           type: "button",
           className: "lb-button",
           onClick: n.submitWord
@@ -3050,9 +3050,9 @@
   function Ar() {
     return d.createElement(d.Fragment, null, d.createElement("h3", {
       className: "lb-modal__title"
-    }, "How to Play"), d.createElement("p", {
+    }, "Cómo jugar"), d.createElement("p", {
       className: "lb-modal__sub-heading"
-    }, "Create words using letters", d.createElement("br", null), "round the square"), d.createElement("div", {
+    }, "Formá palabras con las letras", d.createElement("br", null), "del cuadrado"), d.createElement("div", {
       className: "lb-modal__preview-square"
     }, d.createElement(zr, {
       solution: Br,
@@ -3062,13 +3062,13 @@
       className: "lb-modal__content"
     }, d.createElement("ul", {
       className: "lb-modal__list"
-    }, d.createElement("li", null, "Connect letters to spell words"), d.createElement("li", null, "Words must be at least 3 letters long"), d.createElement("li", null, "Letters can be reused"), d.createElement("li", null, "Consecutive letters cannot be from the same side"), d.createElement("li", null, "The last letter of a word becomes the first letter of the next word", d.createElement("br", null), "e.g. THY > YES > SINCE"), d.createElement("li", null, "Words cannot be proper nouns or hyphenated"), d.createElement("li", null, "No cussing either, sorry"), d.createElement("li", null, "Use all letters to solve!")), d.createElement("p", {
+    }, d.createElement("li", null, "Conectá letras para formar palabras"), d.createElement("li", null, "Cada palabra debe tener al menos 3 letras"), d.createElement("li", null, "Las letras se pueden repetir"), d.createElement("li", null, "Dos letras seguidas no pueden ser del mismo lado"), d.createElement("li", null, "La última letra de una palabra es la primera de la siguiente", d.createElement("br", null), "ej. SOL > LUZ > ZONA"), d.createElement("li", null, "No valen nombres propios ni palabras con guion"), d.createElement("li", null, "Nada de groserías, perdón"), d.createElement("li", null, "¡Usá todas las letras!")), d.createElement("p", {
       className: "lb-modal__more-info"
-    }, "New puzzles are released daily at 3 a.m. ET."), d.createElement("p", {
+    }, "Hay un puzzle nuevo cada día."), d.createElement("p", {
       className: "lb-modal__more-info"
-    }, "Have feedback? Email us at", d.createElement("br", null), d.createElement(Dr, {
-      subject: "Letter Boxed Feedback"
-    }, "nytgames@nytimes.com"), ".")))
+    }, "¿Comentarios? Escribinos a", d.createElement("br", null), d.createElement(Dr, {
+      subject: "Comentarios de Letter Boxed"
+    }, "contacto@adnsur.com"), ".")))
   }
   var Dr = function(e) {
       var t = e.subject,
@@ -3179,13 +3179,13 @@
         className: "lb-modal__icon"
       }), d.createElement("h3", {
         className: "lb-modal__title"
-      }, "Welcome Back"), d.createElement("div", {
+      }, "Hola de nuevo"), d.createElement("div", {
         className: "lb-modal__content"
       }, d.createElement("div", {
         className: "lb-modal__limitHit"
-      }, "No plays left today"), d.createElement("div", {
+      }, "No quedan intentos por hoy"), d.createElement("div", {
         className: "lb-modal__description lb-modal__limitDescription"
-      }, "Subscribe to play again or come", d.createElement("br", null), "back tomorrow for more."), d.createElement("button", {
+      }, "Volvé mañana o ", d.createElement("br", null), "back tomorrow for more."), d.createElement("button", {
         type: "button",
         className: "pz-modal__button lb-button dark play",
         onClick: function() {
@@ -3198,7 +3198,7 @@
             }
           }, !0), window.location.href = e
         }
-      }, "Subscribe"), d.createElement("button", {
+      }, "Seguir"), d.createElement("button", {
         type: "button",
         className: "pz-modal__button lb-button white more",
         onClick: function() {
@@ -3211,7 +3211,7 @@
             }
           }, !0), window.location.href = "/crosswords"
         }
-      }, "More Puzzles")))
+      }, "Más puzzles")))
     };
 
   function qr(e) {
@@ -3272,7 +3272,7 @@
       t = t.yesterdaysSides;
     return d.createElement(d.Fragment, null, d.createElement("h3", {
       className: "lb-modal__title"
-    }, "Our Solution to Yesterday’s Puzzle"), d.createElement("div", {
+    }, "Nuestra solución de ayer"), d.createElement("div", {
       className: "lb-modal__content"
     }, d.createElement("div", {
       className: "lb-modal__wordlist"
@@ -3343,17 +3343,17 @@
             className: "lb-modal__content"
           }, d.createElement("div", {
             className: "lb-modal__description"
-          }, "Create words using letters", d.createElement("br", null), "around the square."), d.createElement("div", {
+          }, "Formá palabras con las letras", d.createElement("br", null), "del cuadrado."), d.createElement("div", {
             className: "pz-byline"
           }, d.createElement("span", {
             className: "pz-byline__text"
-          }, "By", " ", t)), d.createElement("button", {
+          }, "Por", " ", t)), d.createElement("button", {
             type: "button",
             className: "pz-modal__button lb-button dark play",
             onClick: function() {
               l.mobileNavTools.activate(), e.close("welcome", "welcome")
             }
-          }, "Play"), d.createElement("div", {
+          }, "Jugar"), d.createElement("div", {
             className: "lb-button__wrapper"
           }, d.createElement("button", {
             type: "button",
@@ -3361,15 +3361,15 @@
             onClick: function() {
               ut.interaction.settings("how-to-play"), e.open("help", "welcome")
             }
-          }, "Rules"), d.createElement("button", {
+          }, "Reglas"), d.createElement("button", {
             type: "button",
             className: "pz-modal__button lb-button white yesterday",
             onClick: function() {
               ut.interaction.settings("yesterday-solution"), e.open("yesterday", "welcome")
             }
-          }, "Yesterday")), !n && d.createElement("div", {
+          }, "Ayer")), !n && d.createElement("div", {
             className: "lb-modal__limitAlert"
-          }, "1 play left today"), d.createElement("a", {
+          }, "Un puzzle nuevo cada día"), d.createElement("a", {
             href: "https://www.oxforddictionaries.com",
             target: "_blank",
             rel: "noopener noreferrer",
@@ -3387,8 +3387,8 @@
         a = e.parDescription,
         c = e.subParDescription,
         t = e.warnPlayerOnLimit,
-        e = n.length <= r ? "Congratulations!" : "Super solving!",
-        c = n.length <= r ? d.createElement("span", null, d.createElement("p", null, "You solved within ", r, " ", 1 < r ? "words" : "word", "."), " ", d.createElement("p", null, a)) : d.createElement("span", null, c);
+        e = n.length <= r ? "¡Felicitaciones!" : "¡Resolución maestra!",
+        c = n.length <= r ? d.createElement("span", null, d.createElement("p", null, "Lo resolviste dentro de ", r, " ", 1 < r ? "palabras" : "palabra", "."), " ", d.createElement("p", null, a)) : d.createElement("span", null, c);
       return d.createElement(d.Fragment, null, d.createElement("div", {
         className: "lb-modal__square"
       }, d.createElement(zr, {
@@ -3399,7 +3399,7 @@
         className: "lb-modal__title"
       }, e), t && d.createElement("div", {
         className: "lb-modal__limitHit"
-      }, "No plays left today"), d.createElement("div", {
+      }, "No quedan intentos por hoy"), d.createElement("div", {
         className: "lb-modal__content"
       }, d.createElement("div", {
         className: "lb-modal__description"
@@ -3423,7 +3423,7 @@
             }
           }, !0), window.isHybridWebView && window.NativeBridge ? window.NativeBridge.gamesBackToHub() : window.isPlayTab ? ((e = document.createElement("a")).href = "nytimes://play", e.click()) : window.location.href = "/crosswords"
         }
-      }, "View all games"))))
+      }, "Ver todos los juegos"))))
     };
   Yr.defaultProps = {
     warnPlayerOnLimit: !1
@@ -3433,24 +3433,24 @@
     var t = e.data,
       n = e.actions,
       r = e.modalSystem,
-      e = "For an extra challenge, try to solve with ".concat(t.par, " ").concat(1 < t.par ? "words" : "word", " or less.");
+      e = "Para un desafío extra, intentá con ".concat(t.par, " ").concat(1 < t.par ? "palabras" : "palabra", " o menos.");
     return d.createElement(Yr, {
       primaryButton: {
         onClick: function() {
           ut.interaction.gameplay("play-again", t.par), r.close("congrats"), n.resetGame()
         },
-        text: "Play again"
+        text: "Jugar de nuevo"
       },
       data: t,
-      parDescription: "Come back tomorrow for more.",
+      parDescription: "Volvé mañana por más.",
       subParDescription: e
     })
   }
 
   function Jr(e) {
     var t = e.data,
-      n = "Subscribe for unlimited play.",
-      e = "Can you solve with ".concat(t.par, " ").concat(1 < t.par ? "words" : "word", " or less? ").concat(n);
+      n = "Volvé mañana por un puzzle nuevo.",
+      e = "¿Podés resolverlo con ".concat(t.par, " ").concat(1 < t.par ? "palabras" : "palabra", " o menos? ").concat(n);
     return d.createElement(Yr, {
       primaryButton: {
         onClick: function() {
@@ -3463,7 +3463,7 @@
             }
           }, !0), window.location.href = or("letterBoxedCard")
         },
-        text: "Subscribe"
+        text: "Seguir"
       },
       data: t,
       parDescription: n,
@@ -3550,7 +3550,7 @@
       var n, r = ie(t());
       fe(r) || ((n = r.activeWord).length && 2 < n.length ? (n = (t = r).dictionary, t = r.activeWord, n.includes(t) ? (r.message.value && e(no()), e({
         type: E
-      })) : e(io("Not a word", !0))) : e(io("Too short", !0)))
+      })) : e(io("No es una palabra", !0))) : e(io("Muy corta", !0)))
     }
   }
 
