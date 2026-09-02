@@ -8,9 +8,12 @@
 | `palabras.js` | **nuevo** — las listas de palabras en español (editable a mano) |
 | `main.b84b7aa7.js` | lógica + todos los textos visibles traducidos; además reformateado a texto legible |
 
-> Todos los `.js` del repo se reformatearon (de 1 línea a texto indentado) para
-> poder leerlos. La única excepción es `mini-crossword/games-assets/fonts-*.js`,
-> que es solo datos de fuentes en base64 (no hay nada editable ahí).
+> Todos los `.js`, `.css` y `.html` del repo se reformatearon (de 1 línea a texto
+> indentado) para poder leerlos. En los `index.html`, los datos de cada puzzle
+> (`window.gameData`) quedaron como JSON legible, editable a mano. El código de
+> programa dentro de los `<script>` se dejó tal cual (reformatearlo lo rompía).
+> Única excepción: `mini-crossword/games-assets/fonts-*.js`, que es solo datos de
+> fuentes en base64.
 
 ## `palabras.js` — las palabras
 
