@@ -1,9 +1,9 @@
 ![Hits](https://hits.link/hits?url=https%3A%2F%2Fgithub.com%2FLukas-Batema%2Fnyt-game-source-code)
 
-# Wordle en español
+# Inspiracion 
 
-El juego de la carpeta `wordle/` está traducido al español, con teclado con **Ñ**
-y una lista de palabras editable a mano.
+Tome la inspiracion de hacer los juegos que se ven en el NYT en español para probar. Esta basado en el trabajo de https://github.com/luni-moon/nyt-game-source-code
+
 
 ## Cómo ejecutarlo
 
@@ -21,22 +21,9 @@ acostumbrarse a esta forma.)
 
 Para cortar el servidor: `Ctrl + C` en la terminal.
 
-## Dónde editar las palabras
 
-Todas las palabras están en **`wordle/palabras.js`**, un archivo de texto con
-instrucciones adentro. Hay dos listas:
+### Wordle en español
 
-- `WORDLE_ES_SOLUCIONES`: las respuestas de cada día, **en orden**. La primera de
-  la lista es la palabra de hoy, la segunda la de mañana, etc.
-- `WORDLE_ES_ACEPTADAS`: palabras que el juego acepta como intento válido pero que
-  nunca son la respuesta.
-
-Reglas: 5 letras exactas, solo `a-z` y `ñ`, sin tildes (`cafe`, no `café`).
-Después de editar, guardá y recargá la página.
-
-Si querés cambiar textos del juego (mensajes, botones), están en
-`wordle/main.b84b7aa7.js`. Ver `wordle/TRADUCCION.md`.
-
----
-
+El juego de la carpeta `wordle/` está traducido al español, con teclado con **Ñ**
+y una lista de palabras editable a mano.
 
