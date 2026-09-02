@@ -1,6 +1,4 @@
-![Hits](https://hits.link/hits?url=https%3A%2F%2Fgithub.com%2FLukas-Batema%2Fnyt-game-source-code)
-
-# Inspiracion 
+# Juegos diario digital 
 
 Tome la inspiracion de hacer los juegos que se ven en el NYT en español para probar. Esta basado en el trabajo de https://github.com/luni-moon/nyt-game-source-code
 
