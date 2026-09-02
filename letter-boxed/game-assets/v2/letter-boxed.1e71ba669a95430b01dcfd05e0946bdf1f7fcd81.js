@@ -3169,8 +3169,8 @@
       fontSize: 12,
       lineWidth: 3
     },
-    Br = ["WORDS"],
-    Mr = ["WMY", "TOI", "HND", "SLR"],
+    Br = ["GATOS"],
+    Mr = ["GSB", "ACD", "TEI", "OLM"],
     Ir = function() {
       var e = or("letterBoxedCard");
       return d.createElement("div", {
