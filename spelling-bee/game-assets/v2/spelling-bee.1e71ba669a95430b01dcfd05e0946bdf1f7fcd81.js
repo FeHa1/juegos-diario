@@ -559,7 +559,7 @@
       className: "pz-hybrid-back"
     }, e), h.createElement("span", {
       className: "pz-hybrid-back__text"
-    }, "Back"))
+    }, "Volver"))
   }
 
   function Ye(e) {
@@ -580,7 +580,7 @@
   function Xe(e) {
     return (e = e.editor) ? h.createElement("span", {
       className: "pz-moment__info-editor"
-    }, "Edited by ".concat(e)) : null
+    }, "Editado por ".concat(e)) : null
   }
 
   function Ze(e) {
@@ -607,7 +607,7 @@
       return h.createElement("button", {
         type: "button",
         className: "pz-moment__close",
-        "aria-label": "Close",
+        "aria-label": "Cerrar",
         onClick: e
       }, "×")
     },
@@ -825,15 +825,15 @@
     return e.yesterday.foundWords
   }
   var kt = [
-      ["Beginner", 0],
-      ["Good Start", 2],
-      ["Moving Up", 5],
-      ["Good", 8],
-      ["Solid", 15],
-      ["Nice", 25],
-      ["Great", 40],
-      ["Amazing", 50],
-      ["Genius", 70]
+      ["Principiante", 0],
+      ["Buen comienzo", 2],
+      ["Vas subiendo", 5],
+      ["Bien", 8],
+      ["Sólido", 15],
+      ["Muy bien", 25],
+      ["Genial", 40],
+      ["Increíble", 50],
+      ["Genio", 70]
     ],
     jt = function(e, t) {
       return e.length < 5 ? 1 : e.length + (t ? 7 : 0)
@@ -857,7 +857,7 @@
       return kt[e][0]
     },
     Tt = function(t) {
-      return "Queen Bee" === t ? 9 : kt.findIndex(function(e) {
+      return "Abeja Reina" === t ? 9 : kt.findIndex(function(e) {
         return e[0] === t
       })
     },
@@ -868,7 +868,7 @@
         user_id: 171040582,
         game_type: "spelling_bee",
         puzzle_id: "16776",
-        label: "Amazing",
+        label: "Increíble",
         value: 58,
         score_type: "points"
       }, {
@@ -877,7 +877,7 @@
         user_id: 171040582,
         game_type: "spelling_bee",
         puzzle_id: "16776",
-        label: "Good",
+        label: "Bien",
         value: 9,
         score_type: "points"
       }, {
@@ -886,7 +886,7 @@
         user_id: 171040582,
         game_type: "spelling_bee",
         puzzle_id: "16776",
-        label: "Good Start",
+        label: "Buen comienzo",
         value: 2,
         score_type: "points"
       }, {
@@ -895,7 +895,7 @@
         user_id: 171040582,
         game_type: "spelling_bee",
         puzzle_id: "16776",
-        label: "Great",
+        label: "Genial",
         value: 46,
         score_type: "points"
       }, {
@@ -904,7 +904,7 @@
         user_id: 171040582,
         game_type: "spelling_bee",
         puzzle_id: "16776",
-        label: "Moving Up",
+        label: "Vas subiendo",
         value: 6,
         score_type: "points"
       }, {
@@ -913,7 +913,7 @@
         user_id: 171040582,
         game_type: "spelling_bee",
         puzzle_id: "16776",
-        label: "Nice",
+        label: "Muy bien",
         value: 35,
         score_type: "points"
       }, {
@@ -922,7 +922,7 @@
         user_id: 171040582,
         game_type: "spelling_bee",
         puzzle_id: "16776",
-        label: "Solid",
+        label: "Sólido",
         value: 19,
         score_type: "points"
       }, {
@@ -931,7 +931,7 @@
         user_id: 171040582,
         game_type: "spelling_bee",
         puzzle_id: "19084",
-        label: "Amazing",
+        label: "Increíble",
         value: 83,
         score_type: "points"
       }, {
@@ -940,7 +940,7 @@
         user_id: 171040582,
         game_type: "spelling_bee",
         puzzle_id: "19084",
-        label: "Genius",
+        label: "Genio",
         value: 122,
         score_type: "points"
       }, {
@@ -949,7 +949,7 @@
         user_id: 171040582,
         game_type: "spelling_bee",
         puzzle_id: "19084",
-        label: "Good",
+        label: "Bien",
         value: 14,
         score_type: "points"
       }]
@@ -970,7 +970,7 @@
       return e.userType
     },
     Bt = e.createSelector([xt, Lt], function(e, t) {
-      return !t.hasXwd && 4 <= e
+      return !1
     }),
     Rt = e.createSelector([St], function(e) {
       return new Set(e)
@@ -1080,13 +1080,13 @@
       o = e.userType,
       e = Yt(Yt({}, Kt(e, Vt)), {}, {
         buttons: [{
-          text: "Play",
+          text: "Jugar",
           action: function() {
             t(), r("start-game")
           }
         }],
         description: {
-          text: "How many words can you make with&nbsp;7&nbsp;letters?"
+          text: "¿Cuántas palabras podés formar con&nbsp;7&nbsp;letras?"
         }
       });
     return o.hasXwd || e.buttons.push({
@@ -1124,7 +1124,7 @@
         text: e.title,
         size: "small"
       }), h.createElement(nt, {
-        text: "Welcome Back",
+        text: "Otra vez por acá",
         size: "large"
       }), h.createElement(rt, e.description), h.createElement("div", {
         className: "pz-moment__button-wrapper"
@@ -1189,13 +1189,13 @@
       a = e.userType,
       t = tn(tn({}, nn(e, Jt)), {}, {
         buttons: [{
-          text: "Continue",
+          text: "Seguir",
           action: function() {
             n(), o("continue")
           }
         }],
         description: {
-          text: "You’ve found ".concat(t, "&nbsp;word").concat(1 < t ? "s" : "", ".")
+          text: "Encontraste ".concat(t, "&nbsp;palabra").concat(1 < t ? "s" : "", ".")
         }
       });
     return a.hasXwd || t.buttons.push({
@@ -1267,7 +1267,7 @@
         buttons: [{
           color: "secondary",
           variant: "wide",
-          text: "Today’s Puzzle",
+          text: "El juego de hoy",
           action: function() {
             t("spellingBeeCutoffWelcomeBack"), n("play-subscribe")
           },
@@ -1281,7 +1281,7 @@
           }
         }],
         description: {
-          text: "Subscribe to continue playing or come back tomorrow.",
+          text: "Suscribite para seguir jugando o volvé mañana.",
           variant: "small"
         }
       });
@@ -1339,7 +1339,7 @@
         u = e.setGameVisible,
         o = {
           icon: "spelling-bee",
-          title: "Spelling Bee",
+          title: "Deletreo",
           date: n,
           editor: r,
           bgColor: "$spelling-bee-gold",
@@ -1356,39 +1356,39 @@
         };
       return 0 < t ? a ? h.createElement(sn, o) : h.createElement(rn, o) : h.createElement(Xt, o)
     }),
-    dn = "View all games",
+    dn = "Ver todos los juegos",
     pn = {
-      rankImprovement: ["You’re on the up and up! You ranked higher than yesterday.", "You ranked higher than yesterday. Congrats!"],
-      geniusRepeat: ["Genius again! You’re on a roll.", "Genius, yet again! Well done.", "Still a Genius! Excellent work.", "Genius again! No surprise here.", "Genius ... again?! You’re great at this."]
+      rankImprovement: ["¡Vas en subida! Superaste tu rango de ayer.", "Superaste tu rango de ayer. ¡Felicitaciones!"],
+      geniusRepeat: ["¡Genio otra vez! Estás imparable.", "¡Genio de nuevo! Bien ahí.", "¡Seguís siendo Genio! Excelente.", "¡Genio otra vez! No sorprende.", "¿Genio... otra vez?! Sos un crack."]
     },
     yn = function(e) {
-      var t, n = "Keep it up!";
+      var t, n = "¡Seguí así!";
       switch (e) {
-        case "Good Start":
-          n = "Keep it up!";
+        case "Buen comienzo":
+          n = "¡Seguí así!";
           break;
-        case "Moving Up":
-          n = "The elevator is all yours.";
+        case "Vas subiendo":
+          n = "El ascensor es todo tuyo.";
           break;
-        case "Good":
-          n = "And it looks great on you.";
+        case "Bien":
+          n = "Y te queda muy bien.";
           break;
-        case "Solid":
-          n = "You rock.";
+        case "Sólido":
+          n = "Sos un fenómeno.";
           break;
-        case "Nice":
-          n = "And nice people clearly finish first.";
+        case "Muy bien":
+          n = "Y la gente buena llega primero.";
           break;
-        case "Great":
-          n = "We knew you were one of the Greats.";
+        case "Genial":
+          n = "Sabíamos que eras de los grandes.";
           break;
-        case "Amazing":
-          n = "Bet you can do it again. Or maybe even better.";
+        case "Increíble":
+          n = "Seguro podés de nuevo. O incluso mejor.";
           break;
-        case "Genius":
+        case "Genio":
           t = "genius";
           break;
-        case "Queen Bee":
+        case "Abeja Reina":
           t = "queen-bee";
           break;
         default:
@@ -1409,7 +1409,7 @@
       }
     },
     gn = function(e, t) {
-      t = "Queen Bee" === e ? h.createElement("p", null, "May your reign last forever, ", h.createElement("em", null, e), "!") : "Genius" === e ? h.createElement("p", null, "You had a stroke of ", h.createElement("em", null, e), " yesterday.") : h.createElement("p", null, h.createElement("em", null, "Rank: ", e, "."), " ", t);
+      t = "Abeja Reina" === e ? h.createElement("p", null, "Que tu reinado dure para siempre, ", h.createElement("em", null, e), "!") : "Genio" === e ? h.createElement("p", null, "Tuviste un momento de ", h.createElement("em", null, e), " yesterday.") : h.createElement("p", null, h.createElement("em", null, "Rango: ", e, "."), " ", t);
       return t
     },
     vn = function(e) {
@@ -1435,12 +1435,12 @@
         e = Ge(function(e) {
           return e.id
         }),
-        r = r ? "Queen Bee" : Ge($t),
+        r = r ? "Abeja Reina" : Ge($t),
         a = t || r,
         i = Tt(a);
-      if (!t && (0 === o || "Beginner" === a)) return null;
+      if (!t && (0 === o || "Principiante" === a)) return null;
       var c, l, u, s, f, m = "SB-".concat(e);
-      return "yesterday" === n ? (l = n, u = yn(c = a), s = u.encouragement, u = u.icon, c = gn(c, s), s = "Queen Bee" === a ? "completed" : a.toLowerCase().split(" ").join("-"), f = "".concat(i, "-").concat(s), h.createElement(vn, {
+      return "yesterday" === n ? (l = n, u = yn(c = a), s = u.encouragement, u = u.icon, c = gn(c, s), s = "Abeja Reina" === a ? "completed" : a.toLowerCase().split(" ").join("-"), f = "".concat(i, "-").concat(s), h.createElement(vn, {
         icon: u,
         message: c,
         messageType: l,
@@ -1448,9 +1448,9 @@
           return on("stats", "spelling-bee-yesterday", f, m)
         }
       })) : "today" === n ? function(e, t) {
-        if ("Genius" === e || "Queen Bee" === e) r = "geniusRepeat";
+        if ("Genio" === e || "Abeja Reina" === e) r = "geniusRepeat";
         else {
-          if ("Genius" === e) return null;
+          if ("Genio" === e) return null;
           r = "rankImprovement"
         }
         var n = "rankImprovement" === r ? "higher" : "genius",
@@ -1533,7 +1533,7 @@
       }
     }(jn) || function() {
       throw new TypeError("Invalid attempt to spread non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method.")
-    }(), ["Queen Bee"]),
+    }(), ["Abeja Reina"]),
     Nn = function(e) {
       e = Sn().getVariant(e);
       return {
@@ -1602,13 +1602,13 @@
       m = (e = s && _n.includes(s)) || m;
     return o && !m && i("congrats-modal", "spelling-bee", "", f), r = Pn(Pn({}, u), {}, {
       icon: l ? "spelling-bee-spooky" : "spelling-bee-smarty",
-      title: "Genius",
+      title: "Genio",
       celebrationMessage: o && m ? h.createElement(hn, {
         messageType: "today",
         forcedRank: e ? s : null
       }) : null,
       buttons: [{
-        text: "Keep playing",
+        text: "Seguir jugando",
         action: function() {
           t()
         }
@@ -1620,7 +1620,7 @@
         }
       }],
       description: {
-        text: "You reached the highest rank, with <em>".concat(n, " words</em> and <em>").concat(r, " points</em>.")
+        text: "Llegaste al rango más alto, con <em>".concat(n, " palabras</em> y <em>").concat(r, " puntos</em>.")
       }
     }), h.createElement(En, {
       game: r
@@ -1676,7 +1676,7 @@
       o = (e.transitionToGame, e.navigateBack),
       n = Ln(Ln({}, Bn(e, Mn)), {}, {
         icon: "spelling-bee-queen",
-        title: "Queen Bee",
+        title: "Abeja Reina",
         buttons: [{
           text: dn,
           action: function() {
@@ -1684,7 +1684,7 @@
           }
         }],
         description: {
-          text: "You found everything! All <em>".concat(t, " words</em> worth <em>").concat(n, " points</em>.")
+          text: "¡Encontraste todo! Las <em>".concat(t, " palabras</em> que valen <em>").concat(n, " puntos</em>.")
         }
       });
     return h.createElement(En, {
@@ -1810,7 +1810,7 @@
           e = {
             bgColor: "$white",
             icon: "spelling-bee-loved",
-            title: "You’re good at this!",
+            title: "¡Se te da bien esto!",
             buttons: [{
               text: "Subscribe",
               action: function() {
@@ -1823,7 +1823,7 @@
                 fn(), J("back-to-hub", "cutoff-modal")
               }
             }],
-            bodyText: h.createElement(h.Fragment, null, "Have a Games subscription?", " ", h.createElement("a", {
+            bodyText: h.createElement(h.Fragment, null, "¿Ya tenés suscripción?", " ", h.createElement("a", {
               href: function() {
                 var e = 0 < arguments.length && void 0 !== arguments[0] ? arguments[0] : window,
                   t = (null == e || null === (t = e.navigationLinks) || void 0 === t ? void 0 : t.login) || "";
@@ -1841,7 +1841,7 @@
               }
             }, "Log in"), "."),
             description: {
-              text: "Know more words? Subscribe to reach our Genius ranking.",
+              text: "¿Sabés más palabras? Seguí jugando para llegar al rango Genio.",
               variant: "small"
             },
             screen: "congrats"
@@ -2492,7 +2492,7 @@
           return a()
         },
         outerRef: s
-      }, "Enter"), h.createElement(Ir, {
+      }, "Enviar"), h.createElement(Ir, {
         allowBurst: !0,
         className: v("hive-action", "hive-action__delete", {
           "action-active": "delete" === n
@@ -2501,7 +2501,7 @@
           return r()
         },
         outerRef: l
-      }, "Delete"), h.createElement(Ir, {
+      }, "Borrar"), h.createElement(Ir, {
         className: v("hive-action", "hive-action__shuffle", {
           "action-active": "shuffle" === n
         }),
@@ -2515,7 +2515,7 @@
       return function(e, t) {
         t = t();
         t.isLocked || (18 < t.input.length ? e(Dr({
-          value: "Too long",
+          value: "Demasiado larga",
           isError: !0
         })) : (t.message && t.message.isError && e({
           type: I
@@ -2549,16 +2549,16 @@
                 t = 1 < arguments.length && void 0 !== arguments[1] ? arguments[1] : [];
               return ne(e).sort().join() === ne(t).sort().join()
             }(r.split(""), n.outerLetters) && window.reset();
-            var o, a, t = (o = n, t = (a = r).split(""), a.length < 4 ? "Too short" : t.some(function(e) {
+            var o, a, t = (o = n, t = (a = r).split(""), a.length < 4 ? "Muy corta" : t.some(function(e) {
               return !o.validLetters.includes(e)
-            }) ? "Bad letters" : a.includes(o.centerLetter) ? o.answers.includes(a) ? o.foundWords.includes(a) ? "Already found" : void 0 : "Not in word list" : "Missing center letter");
+            }) ? "Letras no válidas" : a.includes(o.centerLetter) ? o.answers.includes(a) ? o.foundWords.includes(a) ? "Ya la encontraste" : void 0 : "No está en la lista" : "Falta la letra del centro");
             t ? e(Dr({
               value: t,
               isError: !0
             })) : (e({
               type: T,
               payload: r
-            }), a = n.pangrams.includes(r), t = jt(r, a), r = t, r = a ? "Pangram!" : 7 <= r ? "Awesome!" : 1 < r ? "Nice!" : "Good!", e({
+            }), a = n.pangrams.includes(r), t = jt(r, a), r = t, r = a ? "¡Pangrama!" : 7 <= r ? "¡Excelente!" : 1 < r ? "¡Muy bien!" : "¡Bien!", e({
               type: A
             }), e(Dr({
               value: r,
@@ -2796,7 +2796,7 @@
         ref: t
       }, u && !b.isMobile && h.createElement("span", {
         className: "sb-hive-input-placeholder"
-      }, "Type or click"), r.map(function(e, t) {
+      }, "Escribí o tocá"), r.map(function(e, t) {
         return h.createElement("span", {
           key: e + t,
           className: v({
@@ -2957,7 +2957,7 @@
       })
     }, h.createElement("span", {
       className: "sb-bob-text"
-    }, "Prev")), e && Qr(Array(s)).map(function(e, t) {
+    }, "Ant.")), e && Qr(Array(s)).map(function(e, t) {
       return h.createElement("div", {
         className: v("sb-bob", {
           active: t === d
@@ -2974,7 +2974,7 @@
       })
     }, h.createElement("span", {
       className: "sb-bob-text"
-    }, "Next"))))
+    }, "Sig."))))
   };
   no.defaultProps = {
     words: [],
@@ -3012,7 +3012,7 @@
         onDown: e
       }, h.createElement("div", {
         className: "sb-wordlist-summary"
-      }, "You have found ", t, " ", 1 === t ? "word" : "words"), h.createElement("div", {
+      }, "Encontraste ", t, " ", 1 === t ? "palabra" : "palabras"), h.createElement("div", {
         className: "sb-recent-words-wrap"
       }, h.createElement("ul", {
         className: v("sb-recent-words", {
@@ -3028,7 +3028,7 @@
       }) : h.createElement("li", {
         key: "none",
         className: "sb-placeholder-text"
-      }, "Your words …"))), h.createElement("div", {
+      }, "Tus palabras …"))), h.createElement("div", {
         className: "sb-toggle-expand"
       }, h.createElement("span", {
         className: v("sb-toggle-icon", {
@@ -3172,7 +3172,7 @@
       r = void 0 === (i = e.children) ? "" : i,
       o = void 0 === (i = e.type) ? Oo : i,
       a = void 0 === (i = e.user) ? {} : i,
-      i = (e = bo(m.useState("mailto:nytgames@nytimes.com"), 2))[0],
+      i = (e = bo(m.useState("#"), 2))[0],
       c = e[1];
     return m.useEffect(function() {
       g.getFeedbackLink(t).then(c)
@@ -3249,15 +3249,15 @@
           t = Sn().getVariant("GAMES_SB_tips");
         return h.createElement(h.Fragment, null, h.createElement(ho, null, h.createElement("h3", {
           className: "sb-modal-title"
-        }, "How to Play Spelling Bee"), h.createElement("h4", {
+        }, "Cómo jugar a Deletreo"), h.createElement("h4", {
           className: "sb-modal-subtitle"
-        }, "Create words using letters from the hive.")), h.createElement(wo, null, h.createElement("ul", {
+        }, "Formá palabras con las letras del panal.")), h.createElement(wo, null, h.createElement("ul", {
           className: "sb-modal-list"
-        }, h.createElement("li", null, "Words must contain at least 4 letters."), h.createElement("li", null, "Words must include the center letter."), h.createElement("li", null, "Our word list does not include words that are obscure, hyphenated, or proper nouns."), h.createElement("li", null, "No cussing either, sorry."), h.createElement("li", null, "Letters can be used more than once.")), h.createElement("h4", {
+        }, h.createElement("li", null, "Las palabras tienen que tener al menos 4 letras."), h.createElement("li", null, "Las palabras tienen que incluir la letra del centro."), h.createElement("li", null, "La lista no incluye palabras muy raras, con guion ni nombres propios."), h.createElement("li", null, "Tampoco malas palabras, perdón."), h.createElement("li", null, "Las letras se pueden usar más de una vez.")), h.createElement("h4", {
           className: "sb-modal-heading"
-        }, "Score points to increase your rating."), h.createElement("ul", {
+        }, "Sumá puntos para subir de rango."), h.createElement("ul", {
           className: "sb-modal-list"
-        }, h.createElement("li", null, "4-letter words are worth 1 point each."), h.createElement("li", null, "Longer words earn 1 point per letter."), h.createElement("li", null, "Each puzzle includes at least one “pangram” which uses every letter. These are worth 7 extra points!")), "1_TipsAndTricks" === t && h.createElement("p", {
+        }, h.createElement("li", null, "Las palabras de 4 letras valen 1 punto cada una."), h.createElement("li", null, "Las palabras más largas suman 1 punto por letra."), h.createElement("li", null, "Cada juego tiene al menos un “pangrama” que usa las 7 letras. ¡Valen 7 puntos extra!")), "1_TipsAndTricks" === t && h.createElement("p", {
           className: "sb-modal-message"
         }, "Need more solving tips?", " ", h.createElement("a", {
           href: "https://www.nytimes.com/2021/12/09/crosswords/spellingbee-tips.html",
@@ -3268,20 +3268,20 @@
           }
         }, "This article can help.")), h.createElement("p", {
           className: "sb-modal-message"
-        }, "New puzzles are released daily at 3 a.m. ET."), h.createElement("p", {
+        }, "Hay un juego nuevo cada día."), h.createElement("p", {
           className: "sb-modal-message"
-        }, "Think we missed a word? Email us at", " ", h.createElement(vo, {
-          subject: "Spelling Bee Word Suggestion",
-          href: "mailto:buzzwords@nytimes.com",
+        }, "¿Te parece que falta una palabra? Podés editar la lista a mano en el archivo del juego.", " ", h.createElement(vo, {
+          subject: "Deletreo",
+          href: "#",
           type: Eo,
           user: e
-        }, "buzzwords@nytimes.com"), "."), h.createElement("p", {
+        }, ""), "."), h.createElement("p", {
           className: "sb-modal-message"
-        }, "Have feedback? Email us at ", h.createElement(vo, {
-          subject: "Spelling Bee Feedback",
+        }, "", h.createElement(vo, {
+          subject: "Deletreo",
           type: Oo,
           user: e
-        }, "nytgames@nytimes.com"), ".")))
+        }, ""))))
       },
       ranks: function() {
         var e = Ge(It),
@@ -3290,9 +3290,9 @@
           });
         return h.createElement(h.Fragment, null, h.createElement(ho, null, h.createElement("h3", {
           className: "sb-modal-title"
-        }, "Rankings"), h.createElement("p", {
+        }, "Rangos"), h.createElement("p", {
           className: "sb-modal-message"
-        }, "Ranks are based on a percentage of possible points in a puzzle. The minimum scores to reach each rank for today’s are:")), h.createElement(wo, null, h.createElement("ol", {
+        }, "Los rangos se calculan según el porcentaje de puntos posibles del juego. Estos son los puntajes mínimos para cada rango de hoy:")), h.createElement(wo, null, h.createElement("ol", {
           className: "sb-modal-list"
         }, e.map(function(e) {
           var t = e.minScore,
@@ -3304,18 +3304,18 @@
           }, e), " (", t, ")")
         })), h.createElement("p", {
           className: "sb-modal-message"
-        }, "Think we missed a word? Email us at", " ", h.createElement(vo, {
-          href: "mailto:buzzwords@nytimes.com",
-          subject: "Spelling Bee Word Suggestion",
+        }, "¿Te parece que falta una palabra? Podés editar la lista a mano en el archivo del juego.", " ", h.createElement(vo, {
+          href: "#",
+          subject: "Deletreo",
           type: Eo,
           user: t
-        }, "buzzwords@nytimes.com"), "."), h.createElement("p", {
+        }, ""), "."), h.createElement("p", {
           className: "sb-modal-message"
-        }, "Have feedback? Email us at ", h.createElement(vo, {
-          subject: "Spelling Bee Feedback",
+        }, "", h.createElement(vo, {
+          subject: "Deletreo",
           type: Oo,
           user: t
-        }, "nytgames@nytimes.com"), ".")))
+        }, ""))))
       },
       yesterday: function() {
         var e = Ge(function(e) {
@@ -3346,7 +3346,7 @@
           })
         }, [a]), h.createElement(h.Fragment, null, h.createElement(ho, null, h.createElement("h3", {
           className: "sb-modal-title"
-        }, "Yesterday’s Answers"), h.createElement("div", {
+        }, "Respuestas de ayer"), h.createElement("div", {
           className: "sb-modal-date__yesterday"
         }, t)), h.createElement(wo, null, l && h.createElement(hn, {
           messageType: "yesterday",
@@ -3382,14 +3382,14 @@
           }))
         }, []), h.createElement(h.Fragment, null, h.createElement(ho, null, h.createElement("h3", {
           className: "sb-modal-title"
-        }, "Statistics"), h.createElement("h4", {
+        }, "Estadísticas"), h.createElement("h4", {
           className: "sb-modal-subtitle"
-        }, "Weekly Recap")), h.createElement(wo, null, e && e.length && h.createElement("div", null, h.createElement("ul", null, null === (e = e[0].score_type) || void 0 === e ? void 0 : e.map(function(e) {
+        }, "Resumen semanal")), h.createElement(wo, null, e && e.length && h.createElement("div", null, h.createElement("ul", null, null === (e = e[0].score_type) || void 0 === e ? void 0 : e.map(function(e) {
           return h.createElement("li", {
             key: e.id
-          }, "On", " ", new Date(e.updated_at).toLocaleString("en-us", {
+          }, "El", " ", new Date(e.updated_at).toLocaleString("es-ES", {
             weekday: "long"
-          }), " ", "you got ", e.value, " points. ", e.label, "!")
+          }), " ", "conseguiste ", e.value, " puntos. ", e.label, "!")
         })))))
       }
     }, _o = function(e) {
@@ -3771,33 +3771,33 @@
       e = Sn().getVariant(Ho) === Fo;
     return g.mobileNavTools.create([e && {
       type: "text",
-      value: "Stats",
+      value: "Estadísticas",
       action: function() {
         return Co("stats", "toolbar")
       }
     }, {
       type: "text",
-      value: "Yesterday",
+      value: "Ayer",
       action: function() {
         return Co("yesterday", "toolbar")
       }
     }, g.mobileNavTools.createDropDown({
-      value: "More",
+      value: "Más",
       items: [{
         type: "button",
-        value: "How to Play",
+        value: "Cómo jugar",
         action: function() {
           return Co("help", "toolbar")
         }
       }, {
         type: "button",
-        value: "Rankings",
+        value: "Rangos",
         action: function() {
           return Co("ranks", "toolbar")
         }
       }, {
         type: "navigation",
-        value: "Today’s Hints",
+        value: "Pistas de hoy",
         url: "".concat(Vo(t)),
         action: function() {
           qo("todays-hints")
@@ -3805,7 +3805,7 @@
         icon: "external"
       }, {
         type: "navigation",
-        value: "Community",
+        value: "Comunidad",
         url: "".concat(Vo(t), "#commentsContainer"),
         action: function() {
           qo("community")
@@ -3820,11 +3820,11 @@
       className: "pz-toolbar-button pz-toolbar-button__stats",
       modal: "stats",
       triggerName: "toolbar"
-    }, "Stats"), h.createElement(xo, {
+    }, "Estadísticas"), h.createElement(xo, {
       className: "pz-toolbar-button pz-toolbar-button__yesterday",
       modal: "yesterday",
       triggerName: "toolbar"
-    }, "Yesterday’s Answers"), h.createElement("a", {
+    }, "Respuestas de ayer"), h.createElement("a", {
       className: "pz-toolbar-button pz-toolbar-button__hints",
       href: Vo(t),
       target: window.isHybridWebView ? "_self" : "_blank",
@@ -3832,25 +3832,25 @@
       onClick: function() {
         return qo("todays-hints")
       }
-    }, "Today’s Hints", h.createElement(Ro, {
+    }, "Pistas de hoy", h.createElement(Ro, {
       icon: "external"
     })), h.createElement(Bo, {
-      buttonLabel: "More"
+      buttonLabel: "Más"
     }, h.createElement(Wo, {
       type: "button",
-      value: "How to Play",
+      value: "Cómo jugar",
       buttonAction: function() {
         return Co("help", "toolbar")
       }
     }), h.createElement(Wo, {
       type: "button",
-      value: "Rankings",
+      value: "Rangos",
       buttonAction: function() {
         return Co("ranks", "toolbar")
       }
     }), h.createElement(Wo, {
       type: "navigation",
-      value: "Community",
+      value: "Comunidad",
       url: "".concat(Vo(t), "#commentsContainer"),
       buttonAction: function() {
         return qo("community")
@@ -3868,7 +3868,7 @@
         t = function(e) {
           return "string" == typeof e && "" !== e
         };
-      return t(n) && t(r) && t(e) ? "https://www.nytimes.com/".concat(n, "/").concat(r, "/").concat(e, "/crosswords/spelling-bee-forum.html") : "https://www.nytimes.com/spotlight/spelling-bee-forum"
+      return "#"
     },
     qo = function(e) {
       return X.interaction.general("spelling-bee", e, "toolbar")
@@ -4045,13 +4045,13 @@
         e.icon = null, e.title = null, e.message = null, t = null;
         break;
       case "1_look_out_b":
-        e.icon = "🔍", e.title = "Look out for the pangram", e.message = "Every puzzle has at least one word that uses all 7 letters, called the Pangram. On some days, there might be more than one.", t = "look out beginning";
+        e.icon = "🔍", e.title = "Atención al pangrama", e.message = "Cada juego tiene al menos una palabra que usa las 7 letras: el pangrama. Algunos días hay más de uno.", t = "look out beginning";
         break;
       case "2_tips_b":
-        e.icon = "ℹ️", e.title = "Tips for leveling up ", e.message = "Every puzzle has at least one word that uses all 7 letters, called the Pangram. On some days, there might be more than one.", t = "tips beginning";
+        e.icon = "ℹ️", e.title = "Consejos para subir de nivel ", e.message = "Cada juego tiene al menos una palabra que usa las 7 letras: el pangrama. Algunos días hay más de uno.", t = "tips beginning";
         break;
       case "3_tips_g":
-        3 <= u && (e.icon = "ℹ️", e.title = "Tips for leveling up ", e.message = "Every puzzle has at least one word that uses all 7 letters, called the Pangram. On some days, there might be more than one.", t = "tips good");
+        3 <= u && (e.icon = "ℹ️", e.title = "Consejos para subir de nivel ", e.message = "Cada juego tiene al menos una palabra que usa las 7 letras: el pangrama. Algunos días hay más de uno.", t = "tips good");
         break;
       default:
         e.icon = null, e.title = null, e.message = null, t = null
